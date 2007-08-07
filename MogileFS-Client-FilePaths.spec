@@ -1,8 +1,8 @@
 name:      perl-MogileFS-Client-FilePaths
 summary:   perl-MogileFS-Client-FilePaths - Perl subclass of MogileFS::Client that adds features included in the FilePaths plugin.
-version:   0.01
+version:   0.02
 release:   1
-vendor:    Brad Fitzpatrick <brad@danga.com>
+vendor:    Jonathan Steinert <hachi@cpan.org>
 packager:  Jonathan Steinert <hachi@cpan.org>
 license:   Artistic
 group:     Applications/CPAN

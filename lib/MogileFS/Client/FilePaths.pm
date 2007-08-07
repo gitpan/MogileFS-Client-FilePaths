@@ -46,7 +46,7 @@ All methods are inhereted and usable from the MogileFS::Client library, with onl
 use strict;
 use warnings;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 $VERSION = eval $VERSION;
 
 use base 'MogileFS::Client';
@@ -159,6 +159,25 @@ sub list {
     }
 
     return @ret;
+}
+
+=head2 rename
+
+ $rv = $mogc->rename($oldpath, $newpath)
+
+Attempts to rename $oldpath to $newpath, returns true on success and false on failure.
+
+=cut
+
+sub rename {
+    my $self = shift;
+    my $orig_path = shift;
+    my $new_path = shift;
+
+    my $result = $self->SUPER::filepaths_rename($orig_path, $new_path);
+
+    return 1 if $result;
+    return;
 }
 
 1;
